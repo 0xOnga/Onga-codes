@@ -4,7 +4,7 @@ from discord.ext import commands
 from discord import channel, embeds
 
 
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = '.') #the character to call commands (in this case .command)
 
 
 
@@ -13,7 +13,7 @@ async def on_ready():
     print('bot is ready')
 
 @client.command()
-async def lp(ctx, tokenMint: str):
+async def lp(ctx, tokenMint: str):   #this is where you choose how to name your command
     
     channel = client.get_channel() #your chat channel id (make sure you have enabled dev console and then right click on the channel and click copy id
     
