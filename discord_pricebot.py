@@ -19,7 +19,7 @@ async def on_ready():
     priceloop.start()
 
 
-@tasks.loop(seconds = 120)
+@tasks.loop(seconds = 120)  #updating too frequently may lead to break discord api restrictions!
 async def priceloop():
 
     cc = conn("https://api.mainnet-beta.solana.com/")
