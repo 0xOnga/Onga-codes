@@ -47,7 +47,7 @@ async def priceloop():
     guild = client.get_guild(4324324324324)  #your server id
     pricebot = guild.get_member(3243423424324)  #your bot id
     await pricebot.edit(nick=" %f$" % bidprice)
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Sell order @ %f$ made by Onga#0185" % askprice))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Sell order @ %f$ made by @_Onga_" % askprice))
     
 
 
