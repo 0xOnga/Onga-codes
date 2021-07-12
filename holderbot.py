@@ -31,8 +31,8 @@ async def holdersloop():
 
     n = rstr.count('pubkey')
 
-    guild = client.get_guild()  #your server id
-    pricebot = guild.get_member()  #your bot id
+    guild = client.get_guild()  #put your server id in the brackets
+    pricebot = guild.get_member()  #put your bot id in the brackets
     await pricebot.edit(nick=f'{n:,} HOLDERS')
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Holders made by @_Onga_" ))
 
