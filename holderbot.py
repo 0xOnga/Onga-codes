@@ -30,10 +30,20 @@ async def holdersloop():
 
 
     n = rstr.count('pubkey')
+    
+    data = json.loads(rstr)
+
+    n = rstr.count('pubkey')
+
+    #clear out 0 balance holders
+    count = 0
+    for i in range(n):
+        if (data['result'][i]['account']['data']['parsed']['info']['tokenAmount']['uiAmount']) != 0:
+            count= count + 1
 
     guild = client.get_guild()  #put your server id in the brackets
     pricebot = guild.get_member()  #put your bot id in the brackets
-    await pricebot.edit(nick=f'{n:,} HOLDERS')
+    await pricebot.edit(nick=f'{count:,} HOLDERS')
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Holders made by @_Onga_" ))
 
 
