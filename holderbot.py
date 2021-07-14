@@ -7,7 +7,7 @@ from discord.guild import Guild
 from discord.ext import commands, tasks
 from discord.utils import get
 
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = '.')   #symbol before the command
 
 @client.event
 async def on_ready():
@@ -53,7 +53,7 @@ async def holdersloop():
     
     #command to retrieve holders
 @client.command()
-async def holders(ctx):
+async def holders(ctx):    #name of the command
     mint = "" #token mint
     endpoint = "https://api.mainnet-beta.solana.com"
     headers = {
