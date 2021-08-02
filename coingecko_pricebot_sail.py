@@ -26,7 +26,7 @@ async def priceloop():
 
     
     price = r.json()
-    print(price)
+    
 
     guild = client.get_guild()  #your server id
     pricebot = guild.get_member()  #your bot id
